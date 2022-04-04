@@ -237,7 +237,7 @@ namespace Myschool
 
         private void Print_Button(object sender, EventArgs e) //Вызовем кнопку и даем названия "Print_Button" которые будет распечатать элементы из нового списка на компьютер
         {
-            if (Current_schedule.Items.Contains(Schedule_of_first_Section.Text)) //Если новая списка содержить элементы сииска первого секция университета
+            if (Current_schedule.Items.Contains(Schedule_of_first_Section.Text) || Current_schedule.SelectedItem!= null) //Если новая списка содержить элементы сииска первого секция университета или элемент выбиран пользователем в новом расписании 
             {
 
                 string dir = $"C:\\SPBGASU SCHEDULE"; //Тогда создадим каталог C:\\ и даем назания папка "SPBGASU SCHEDULE"
@@ -288,6 +288,7 @@ namespace Myschool
 
                 MessageBox.Show("если вы хотите создать другое расписание, измените дату.");
             }
+
         }
 
         private void First_Section_As_Label(object sender, EventArgs e) //Вызовем ярлык и даем названия "First_Section_As_Label" которые являается ярлык рассписания первого ветвь университета
@@ -394,6 +395,7 @@ namespace Myschool
             Schedule_of_first_Section.ClearSelected(); //Убирается выделения элемент из первой рассписания   
 
             Schedule_of_second_Section.ClearSelected(); //Убирается выделения элемент из второй рассписания 
+
         }
 
         private void Second_Section_Schedule_As_Listbox(object sender, EventArgs e) //Вызовем Групповой ящик и лаем названия  "SPBGASU_As_GROUPBOX" которые содержить две разных ветвь расписанях
