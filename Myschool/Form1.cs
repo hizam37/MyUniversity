@@ -237,7 +237,9 @@ namespace Myschool
 
         private void Print_Button(object sender, EventArgs e) //Вызовем кнопку и даем названия "Print_Button" которые будет распечатать элементы из нового списка на компьютер
         {
-            if (Current_schedule.Items.Contains(Schedule_of_first_Section.Text) || Current_schedule.SelectedItem!= null || Current_schedule.SelectedIndex == -1) //Если новая списка содержить элементы сииска первого секция университета или элемент выбиран пользователем в новом расписании 
+            if (Current_schedule.Items.Contains(Schedule_of_first_Section.Text) || Current_schedule.SelectedItem!= null || Current_schedule.SelectedIndex == -1) //Если новая списка содержить элементы сииска первого секция университета 
+                                                                                                                                                                  //или элемент выбиран пользователем в новом расписании
+                                                                                                                                                                  //или элемент не выбиран пользователем в новом расписании  
             {
 
                 string dir = $"C:\\SPBGASU SCHEDULE"; //Тогда создадим каталог C:\\ и даем назания папка "SPBGASU SCHEDULE"
